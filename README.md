@@ -21,3 +21,14 @@ abline(v = 0)
 plot(c(3, 6, 9, 12), c(1, 4.3, 8.7, 12), pch = 16, col = "red", ylim = c(-2, 15), xlab = "3,6,9,12", ylab = "1,4.3,8.7,12")
 lines(c(3, 6, 9, 12), c(1, 4.3, 8.7, 12), col = "purple4")
 ```
+
+### graph_03.R
+```
+#!/usr/bin/env R
+
+X <- c(1,5.5,10,14.5,19,23.5,28,32.5)
+Y <- c(2,6.5,11,15.5,20,24.5,29,33.5)
+plot(X, Y, pch = 16) 
+plot(X, Y, type = "o", col = "red", xlab = "X", ylab = "Y") 
+title(main = "Upward Trend", font.main = 2, col.main = "blue")
+```

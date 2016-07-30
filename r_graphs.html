@@ -17,11 +17,6 @@
     <nav id="top">
       <a class="bg" href="#plot_01">Plot 01</a> &#8701;
       <a class="bg" href="#plot_02">Plot 02</a> &#8701;
-      <a class="bg" href="xxxxxxxx">Plot 03</a> &#8701;
-      <a class="bg" href="xxxxxxxx">Plot 04</a> &#8701;
-      <a class="bg" href="xxxxxxxx">Plot 05</a> &#8701;
-      <a class="bg" href="xxxxxxxx">Plot 06</a> &#8701;
-      <a class="bg" href="xxxxxxxx">Plot 07</a> &#8701;
     </nav>
     <section>
       <article>
@@ -38,7 +33,7 @@ name <- "Radon"
 plot(X, Y, type="o", col="581", xlab = paste(name, "'s Profits", sep = ""), ylab = paste("Points from ", min, " to ", max,  sep = "")) 
 title(main = paste("Sector ", k, " for ", name, sep = ""), font.main = 2, col.main = "#CC6600")
         </code>
-        <img class="displayed" src="/home/nick/Desktop/R_Graph_Essentials/radon_profits.png" />
+        <img class="displayed" src="radon_profits.png" />
       </article>
       <article>
         <h2 class="inline" id="plot_02">R Plot 02</h2>
@@ -53,7 +48,7 @@ name <- "Radon"
 plot(X, Y, type = "o", col = "red", main = paste("Sector ", s, " for ", name, sep = ""), pch = 16, cex = 1.4, font.main = 2, col.main = "blue", xlab = paste(name, "'s Profits", sep = ""), ylab = paste("Points from ", min, " to ", max,  sep = ""))
 abline(lm(Y ~ X))
         </code>
-        <img class="displayed" src="/home/nick/Desktop/R_Graph_Essentials/radon_profits_lm.png" />
+        <img class="displayed" src="radon_profits_lm.png" />
       </article>
     </section>
     <footer>

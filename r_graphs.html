@@ -19,6 +19,7 @@
       <a class="bg" href="#plot_01">Plot 01</a> &#8701;
       <a class="bg" href="#plot_02">Plot 02</a> &#8701;
       <a class="bg" href="#plot_03">Plot 03</a> &#8701;
+      <a class="bg" href="#plot_04">Plot 04</a> &#8701;
     </nav>
     <section>
       <article>
@@ -59,6 +60,17 @@ abline(lm(Y ~ X))
 curve(4*x**3+5*x**2-5, -2, 2, col="purple4", main=expression(4*x**3+5*x**2-5), ylab="y")
         </code>
         <img class="displayed" src="/home/nick/Desktop/R_Graph_Essentials/curve_01.png" />
+      </article>
+      <article>
+        <h2 class="inline" id="plot_04">R Plot 04</h2>
+        <a class="inline" href="#top">top</a>
+        <code>
+x <- seq(-pi, pi, length=50)  
+y <- sin(x)  
+plot(x, y, pch=17, cex=0.7, col="darkgreen") 
+lines(x, y, col="darkgreen")
+        </code>
+        <img class="displayed" src="/home/nick/Desktop/R_Graph_Essentials/curve_pi_seq.png" />
       </article>
     </section>
     <footer>

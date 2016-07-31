@@ -20,6 +20,7 @@
       <a class="bg" href="#plot_02">Plot 02</a> &#8701;
       <a class="bg" href="#plot_03">Plot 03</a> &#8701;
       <a class="bg" href="#plot_04">Plot 04</a> &#8701;
+      <a class="bg" href="#plot_05">Plot 05</a> &#8701;
     </nav>
     <section>
       <article>
@@ -71,6 +72,19 @@ plot(x, y, pch=18, cex=0.8, col="red4")
 lines(x, y, col="red4")
         </code>
         <img class="displayed" src="/home/nick/Desktop/R_Graph_Essentials/curve_pi_seq.png" />
+      </article>
+      <article>
+        <h2 class="inline" id="plot_05">R Plot 05</h2>
+        <a class="inline" href="#top">top</a>
+        <code>
+X  <- c(1, 2, 3, 4, 5, 6, 7, 8)
+YA <- c(2, 3.5, 6, 7.5, 11, 13.5, 16, 18)
+YB <- c(4, 6, 7.5, 8, 8.5, 10, 11.5, 13)
+plot(X, YA, type = "o", pch = 18, cex = 1.2, col = "darkgreen", ylim = c(0, 20), xlab = "Years", ylab = "Millions")
+lines(YB, type = "o", pch = 17, lty = 2, col = "blue")
+title(main = "Production and Sales", col.main = "firebrick4", font.main = 2)
+        </code>
+        <img class="displayed" src="/home/nick/Desktop/R_Graph_Essentials/graph_prod_sales.png" />
       </article>
     </section>
     <footer>

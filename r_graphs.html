@@ -11,12 +11,14 @@
       .inline { display: inline-block; }
       code { white-space: pre; }
       img.displayed { display: block; margin-left: auto; margin-right: auto; }
+      ul { list-style: none; }
     </style>
   </head>
   <body>
     <nav id="top">
       <a class="bg" href="#plot_01">Plot 01</a> &#8701;
       <a class="bg" href="#plot_02">Plot 02</a> &#8701;
+      <a class="bg" href="#plot_03">Plot 03</a> &#8701;
     </nav>
     <section>
       <article>
@@ -50,9 +52,18 @@ abline(lm(Y ~ X))
         </code>
         <img class="displayed" src="radon_profits_lm.png" />
       </article>
+      <article>
+        <h2 class="inline" id="plot_03">R Plot 03</h2>
+        <a class="inline" href="#top">top</a>
+        <code>
+curve(4*x**3+5*x**2-5, -2, 2, col="purple4", main=expression(4*x**3+5*x**2-5), ylab="y")
+        </code>
+        <img class="displayed" src="/home/nick/Desktop/R_Graph_Essentials/curve_01.png" />
+      </article>
     </section>
     <footer>
       <ul>
+      	<li>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a></li>
         <li><a href="https://github.com/nick3499/graphs_r_lang">Github: Graphs R (language)</a></li>
 	<li><a href="https://medium.com/@nick3499">Medium: nick3499</a></li>
       </ul>

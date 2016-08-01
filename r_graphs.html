@@ -6,12 +6,40 @@
       R Graph Examples
     </title>
     <style>
-      nav a.bg { background: #e6fff7; padding: 10px; }
-      h2 { background: #e6faff; padding:10px; }
-      .inline { display: inline-block; }
-      code { white-space: pre; }
-      img.displayed { display: block; margin-left: auto; margin-right: auto; }
+      nav a.bg { 
+				background: #e6fff7; 
+				padding: 10px; 
+				box-shadow: 5px 5px 5px #369;
+				text-decoration: none;
+				font-weight: bold;
+			}
+			nav a.bg:hover { 
+				background: lightgreen;
+			}
+			nav a.bg:active {
+				color: #f00;
+				font-size: 130%;
+			}
+      h2 { 
+				background: #e6faff; 
+				padding:10px; 
+				box-shadow: 5px 5px 5px #369;
+			}
+      .inline { 
+				display: inline-block; }
+				code { white-space: pre;
+				font-size: 130%;
+			}
+      img.displayed { display: block; 
+				margin-left: auto; 
+				margin-right: auto; 
+				box-shadow: 10px 10px 5px grey;
+			}
       ul { list-style: none; }
+				article { background-image: url("white_background_texture.jpg"); 
+				border-bottom: thick double #000; 
+				padding-bottom: 20px; 
+			}
     </style>
   </head>
   <body>
@@ -21,21 +49,31 @@
       <a class="bg" href="#plot_03">Plot 03</a> &#8701;
       <a class="bg" href="#plot_04">Plot 04</a> &#8701;
       <a class="bg" href="#plot_05">Plot 05</a> &#8701;
+      <a class="bg" href="#plot_06">Plot 05</a> &#8701;
     </nav>
     <section>
       <article>
         <h2 class="inline" id="plot_01">R Plot 01</h2>
         <a class="inline" href="#top">top</a>
         <code>
-#!/usr/bin/env R
 X <- c(1,5.5,10,14.5,19,23.5,28,32.5)
 Y <- c(2,6.5,11,15.5,20,24.5,29,33.5)
 k <- 8
 min <- 2
 max <- 23
 name <- "Radon"
-plot(X, Y, type="o", col="581", xlab = paste(name, "'s Profits", sep = ""), ylab = paste("Points from ", min, " to ", max,  sep = "")) 
-title(main = paste("Sector ", k, " for ", name, sep = ""), font.main = 2, col.main = "#CC6600")
+plot( 
+  X, Y, 
+  type="o", 
+  col="581", 
+  xlab = paste(name, "'s Profits", sep = ""), 
+  ylab = paste("Points from ", min, " to ", max,  sep = "") 
+) 
+title( 
+  main = paste("Sector ", k, " for ", name, sep = ""), 
+  font.main = 2, 
+  col.main = "#CC6600" 
+)
         </code>
         <img class="displayed" src="radon_profits.png" />
       </article>
@@ -49,8 +87,21 @@ s <- 8
 min <- 2
 max <- 30
 name <- "Radon"
-plot(X, Y, type = "o", col = "red", main = paste("Sector ", s, " for ", name, sep = ""), pch = 16, cex = 1.4, font.main = 2, col.main = "blue", xlab = paste(name, "'s Profits", sep = ""), ylab = paste("Points from ", min, " to ", max,  sep = ""))
-abline(lm(Y ~ X))
+plot( 
+  X, Y, 
+  type = "o", 
+  col = "red", 
+  main = paste("Sector ", s, " for ", name, sep = ""), 
+  pch = 16, 
+  cex = 1.4, 
+  font.main = 2, 
+  col.main = "blue", 
+  xlab = paste(name, "'s Profits", sep = ""), 
+  ylab = paste("Points from ", min, " to ", max,  sep = "")
+)
+abline(
+  lm(Y ~ X)
+)
         </code>
         <img class="displayed" src="radon_profits_lm.png" />
       </article>
@@ -58,7 +109,13 @@ abline(lm(Y ~ X))
         <h2 class="inline" id="plot_03">R Plot 03</h2>
         <a class="inline" href="#top">top</a>
         <code>
-curve(4*x**3+5*x**2-5, -2, 2, col="purple4", main=expression(4*x**3+5*x**2-5), ylab="y")
+curve(
+  4*x**3 + 5*x**2 - 5, 
+  -2, 2, 
+  col = "purple4", 
+  main = expression(4*x**3 + 5*x**2 - 5), 
+  ylab = "y"
+)
         </code>
         <img class="displayed" src="curve_01.png" />
       </article>
@@ -66,10 +123,21 @@ curve(4*x**3+5*x**2-5, -2, 2, col="purple4", main=expression(4*x**3+5*x**2-5), y
         <h2 class="inline" id="plot_04">R Plot 04</h2>
         <a class="inline" href="#top">top</a>
         <code>
-x <- seq(-pi, pi, length=60)  
-y <- sin(x)  
-plot(x, y, pch=18, cex=0.8, col="red4") 
-lines(x, y, col="red4")
+x <- seq(
+  -pi, pi, 
+  length = 60
+) 
+y <- sin(x) 
+plot( 
+  x, y, 
+  pch = 18, 
+  cex = 0.8, 
+  col = "red4" 
+) 
+lines( 
+  x, y, 
+  col = "red4" 
+) 
         </code>
         <img class="displayed" src="curve_pi_seq.png" />
       </article>
@@ -78,20 +146,98 @@ lines(x, y, col="red4")
         <a class="inline" href="#top">top</a>
         <code>
 X  <- c(1, 2, 3, 4, 5, 6, 7, 8)
-YA <- c(2, 3.5, 6, 7.5, 11, 13.5, 16, 18)
-YB <- c(4, 6, 7.5, 8, 8.5, 10, 11.5, 13)
-plot(X, YA, type = "o", pch = 18, cex = 1.2, col = "darkgreen", ylim = c(0, 20), xlab = "Years", ylab = "Millions")
-lines(YB, type = "o", pch = 17, lty = 2, col = "blue")
-title(main = "Production and Sales", col.main = "firebrick4", font.main = 2)
+P <- c(2, 3.5, 6, 7.5, 11, 13.5, 16, 18)
+S <- c(4, 6, 7.5, 8, 8.5, 10, 11.5, 13)
+plot( 
+  X, P, 
+  ylim = c(0, 20), 
+  type = "b", 
+  pch = 18, 
+  cex = 1.2, 
+  col = "green4", 
+  xlab = "Years", 
+  ylab = "Millions" 
+)
+lines( 
+  S, 
+  type = "b", 
+  pch = 17, 
+  lty = 2, 
+  col = "darkviolet" 
+) 
+title(
+  main = "Production and Sales",
+  col.main = "firebrick4",
+  font.main = 2
+)
         </code>
         <img class="displayed" src="graph_prod_sales.png" />
+      </article>
+      <article>
+        <h2 class="inline" id="plot_06">R Plot 06</h2>
+        <a class="inline" href="#top">top</a>
+        <code>
+Q1 <- c(2, 4, 5, 7, 12, 14, 16)
+Q2 <- c(3, 6, 7, 8, 9, 11, 12)
+Q3 <- c(1, 7, 3, 2, 2, 7, 9)
+yaxismax <- max(Q1, Q2, Q3)
+plot(
+  Q1,
+  pch = 16,
+  type = "b",
+  col = "midnightblue",
+  ylim = c(0, yaxismax),
+  axes = FALSE,
+  ann = FALSE
+)
+axis(
+  1,
+  at = 1:7,
+  lab = c("A", "B", "C", "D", "E", "F", "G")
+)
+axis(
+  2, 
+  las = 1, 
+  at = 4 * 0:yaxismax
+)
+box()
+lines(
+  Q2,
+  pch = 17,
+  type = "b",
+  lty = 2,
+  col = "firebrick4"
+)
+lines(
+  Q3,
+  pch = 18,
+  type = "b",
+  lty = 3,
+  col = "darkolivegreen4"
+)
+title(
+  main = "Production, Sales and Investment",
+  col.main = "darkgreen",
+  font.main = 2)
+title(xlab = toupper("Project Phases"), col.lab = "maroon4")
+title(ylab = "Millions", col.lab = "tomato4")
+legend(
+  1, yaxismax,
+  c("Q1", "Q2", "Q3"),
+  cex = 0.8,
+  col = c("midnightblue", "firebrick4", "darkolivegreen4"),
+  pch = c(16, 17, 18),
+  lty = 1:3
+)
+        </code>
+        <img class="displayed" src="graph_prod_sales_inv.png" />
       </article>
     </section>
     <footer>
       <ul>
       	<li>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a></li>
         <li><a href="https://github.com/nick3499/graphs_r_lang">Github: Graphs R (language)</a></li>
-	<li><a href="https://medium.com/@nick3499">Medium: nick3499</a></li>
+				<li><a href="https://medium.com/@nick3499">Medium: nick3499</a></li>
       </ul>
     </footer>
   </body>

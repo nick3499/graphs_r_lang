@@ -1,45 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>
-      R Graph Examples
-    </title>
+    <title>R Graph Examples</title>
+    <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
     <style>
-      nav a.bg { 
-				background: #e6fff7; 
-				padding: 10px; 
-				box-shadow: 5px 5px 5px #369;
-				text-decoration: none;
-				font-weight: bold;
-			}
-			nav a.bg:hover { 
-				background: lightgreen;
-			}
-			nav a.bg:active {
-				color: #f00;
-				font-size: 130%;
-			}
-      h2 { 
-				background: #e6faff; 
-				padding:10px; 
-				box-shadow: 5px 5px 5px #369;
-			}
-      .inline { 
-				display: inline-block; }
-				code { white-space: pre;
-				font-size: 130%;
-			}
-      img.displayed { display: block; 
-				margin-left: auto; 
-				margin-right: auto; 
-				box-shadow: 10px 10px 5px grey;
-			}
+      /* nav */
+      nav a.bg { background: #e6fff7; padding: 10px; box-shadow: 5px 5px 5px #369; text-decoration: none; font-weight: bold; }
+      nav a.bg:hover { background: lightgreen; }
+      nav a.bg:active { color: #f00; font-size: 130%; }
+
+      body { margin: 10px; font-family: 'Dosis', sans-serif; }
+      h2 { background: #e6faff; padding:10px; box-shadow: 5px 5px 5px #369; }
+      .inline { display: inline-block; }
+      code { white-space: pre; font-size: 130%; }
+      img.displayed { display: block; margin-left: auto; margin-right: auto; box-shadow: 10px 10px 5px grey; }
       ul { list-style: none; }
-				article { background-image: url("white_background_texture.jpg"); 
-				border-bottom: thick double #000; 
-				padding-bottom: 20px; 
-			}
+      article { background-image: url("white_background_texture.jpg"); border-bottom: thick double #000; padding-bottom: 20px; }
     </style>
   </head>
   <body>
@@ -49,7 +25,8 @@
       <a class="bg" href="#plot_03">Plot 03</a> &#8701;
       <a class="bg" href="#plot_04">Plot 04</a> &#8701;
       <a class="bg" href="#plot_05">Plot 05</a> &#8701;
-      <a class="bg" href="#plot_06">Plot 05</a> &#8701;
+      <a class="bg" href="#plot_06">Plot 06</a> &#8701;
+      <a class="bg" href="#plot_07">Plot 07</a> &#8701;
     </nav>
     <section>
       <article>
@@ -232,12 +209,42 @@ legend(
         </code>
         <img class="displayed" src="graph_prod_sales_inv.png" />
       </article>
+      <article>
+        <h2 class="inline" id="plot_07">R Plot 07</h2>
+        <a class="inline" href="#top">top</a>
+        <code>
+x <- c(2,4,6,7,8,10,12)
+sales <- c(1,2,3,4,6,8,9)
+production <- c(1,5,7,5,8,10,12)
+inventory <- c(3,4,6,7,5,8,9)
+par(mar = rep(2,4)) # to stop error msg
+par(mfrow = c(2,2))
+plot(
+  x, sales, 
+  pch =  1
+)
+plot(
+  x, production, 
+  pch =  2
+)
+plot(
+  x, production, 
+  pch = 15
+)
+plot(
+  x, inventory, 
+  pch = 16
+)
+        </code>
+        <img class="displayed" src="graphs_four.png" />
+      </article>
     </section>
     <footer>
       <ul>
       	<li>Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a></li>
         <li><a href="https://github.com/nick3499/graphs_r_lang">Github: Graphs R (language)</a></li>
-				<li><a href="https://medium.com/@nick3499">Medium: nick3499</a></li>
+		<li><a href="https://medium.com/@nick3499">Medium: nick3499</a></li>
+        <li><em>Dosis</em> font licensed under <a href="http://scripts.sil.org/OFL">SIL Open Font License, Version 1.1</a></li>
       </ul>
     </footer>
   </body>

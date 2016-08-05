@@ -12,7 +12,7 @@
       body { margin: 10px; font-family: 'Dosis', sans-serif; }
       h2 { background: #e6faff; padding:10px; box-shadow: 5px 5px 5px #369; }
       .inline { display: inline-block; }
-      code { white-space: pre; font-size: 130%; }
+      pre { background-color: #d3d3d3; border: 2px dotted #898989; padding: 10px; box-shadow: 5px 5px 5px #369; }
       img.displayed { display: block; margin-left: auto; margin-right: auto; box-shadow: 10px 10px 5px grey; }
       ul { list-style: none; }
       article { background-image: url("white_background_texture.jpg"); border-bottom: thick double #000; padding-bottom: 20px; }
@@ -32,7 +32,7 @@
       <article>
         <h2 class="inline" id="plot_01">R Plot 01</h2>
         <a class="inline" href="#top">top</a>
-        <code>
+        <pre>
 X <- c(1,5.5,10,14.5,19,23.5,28,32.5)
 Y <- c(2,6.5,11,15.5,20,24.5,29,33.5)
 k <- 8
@@ -51,13 +51,13 @@ title(
   font.main = 2, 
   col.main = "#CC6600" 
 )
-        </code>
+        </pre>
         <img class="displayed" src="radon_profits.png" />
       </article>
       <article>
         <h2 class="inline" id="plot_02">R Plot 02</h2>
         <a class="inline" href="#top">top</a>
-        <code>
+        <pre>
 X <- c(0,5,10,15,20,25,30,35)
 Y <- c(2,4,13,13,23,21,32,30)
 s <- 8
@@ -79,13 +79,13 @@ plot(
 abline(
   lm(Y ~ X)
 )
-        </code>
+        </pre>
         <img class="displayed" src="radon_profits_lm.png" />
       </article>
       <article>
         <h2 class="inline" id="plot_03">R Plot 03</h2>
         <a class="inline" href="#top">top</a>
-        <code>
+        <pre>
 curve(
   4*x**3 + 5*x**2 - 5, 
   -2, 2, 
@@ -93,13 +93,13 @@ curve(
   main = expression(4*x**3 + 5*x**2 - 5), 
   ylab = "y"
 )
-        </code>
+        </pre>
         <img class="displayed" src="curve_01.png" />
       </article>
       <article>
         <h2 class="inline" id="plot_04">R Plot 04</h2>
         <a class="inline" href="#top">top</a>
-        <code>
+        <pre>
 x <- seq(
   -pi, pi, 
   length = 60
@@ -115,13 +115,13 @@ lines(
   x, y, 
   col = "red4" 
 ) 
-        </code>
+        </pre>
         <img class="displayed" src="curve_pi_seq.png" />
       </article>
       <article>
         <h2 class="inline" id="plot_05">R Plot 05</h2>
         <a class="inline" href="#top">top</a>
-        <code>
+        <pre>
 X  <- c(1, 2, 3, 4, 5, 6, 7, 8)
 P <- c(2, 3.5, 6, 7.5, 11, 13.5, 16, 18)
 S <- c(4, 6, 7.5, 8, 8.5, 10, 11.5, 13)
@@ -147,13 +147,13 @@ title(
   col.main = "firebrick4",
   font.main = 2
 )
-        </code>
+        </pre>
         <img class="displayed" src="graph_prod_sales.png" />
       </article>
       <article>
         <h2 class="inline" id="plot_06">R Plot 06</h2>
         <a class="inline" href="#top">top</a>
-        <code>
+        <pre>
 Q1 <- c(2, 4, 5, 7, 12, 14, 16)
 Q2 <- c(3, 6, 7, 8, 9, 11, 12)
 Q3 <- c(1, 7, 3, 2, 2, 7, 9)
@@ -206,13 +206,13 @@ legend(
   pch = c(16, 17, 18),
   lty = 1:3
 )
-        </code>
+        </pre>
         <img class="displayed" src="graph_prod_sales_inv.png" />
       </article>
       <article>
         <h2 class="inline" id="plot_07">R Plot 07</h2>
         <a class="inline" href="#top">top</a>
-        <code>
+        <pre>
 x <- c(2,4,6,7,8,10,12)
 sales <- c(1,2,3,4,6,8,9)
 production <- c(1,5,7,5,8,10,12)
@@ -235,7 +235,7 @@ plot(
   x, inventory, 
   pch = 16
 )
-        </code>
+        </pre>
         <img class="displayed" src="graphs_four.png" />
       </article>
     </section>

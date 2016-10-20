@@ -1,4 +1,4 @@
-# graphs_r_lang
+# r_scripts
 ## Plotting R (Language) Graphs
 
 ### graph_01.R

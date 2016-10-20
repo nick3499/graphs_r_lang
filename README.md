@@ -1,7 +1,5 @@
 # r_scripts
-## Plotting R (Language) Graphs
-
-### graph_01.R
+## graph_01.R
 
 ```
 #!/usr/bin/env R
@@ -14,7 +12,7 @@ abline(h = 0)
 abline(v = 0)
 ```
 
-### graph_02.R
+## graph_02.R
 ```
 #!/usr/bin/env R
 
@@ -22,7 +20,7 @@ plot(c(3, 6, 9, 12), c(1, 4.3, 8.7, 12), pch = 16, col = "red", ylim = c(-2, 15)
 lines(c(3, 6, 9, 12), c(1, 4.3, 8.7, 12), col = "purple4")
 ```
 
-### graph_03.R
+## graph_03.R
 ```
 #!/usr/bin/env R
 

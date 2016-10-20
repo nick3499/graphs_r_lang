@@ -5,7 +5,7 @@ date: "October 20, 2016"
 ---
  - 181 stock market adjusted closing prices for Starbucks (SBUX)
  - assign .csv data to `data_url` using `read.csv()`
-```{r print}
+```{r render("Computational_Finance.Rmd")}
 data_url <- 'sbuxPrices.csv'
 sbux_df <- read.csv(data_url, header=T, stringsAsFactors=F)
 print(sbux_df)

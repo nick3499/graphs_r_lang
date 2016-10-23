@@ -8,7 +8,7 @@ date: "October 20, 2016"
 ```{r, results='asis'}
 data_url <- 'sbuxPrices.csv'
 sbux_df <- read.csv(data_url, header=T, stringsAsFactors=F)
-knitr::kable(sbux_df)
+print(sbux_df)
 ```
  - check data frame
 ```{r}

@@ -3,6 +3,7 @@ title: "Computational_Finance"
 output: html_document
 date: "October 20, 2016"
 ---
+library('rmarkdown')
  - 181 stock market adjusted closing prices for Starbucks (SBUX)
  - assign .csv data to `data_url` using `read.csv()`
 ```{r, rmarkdown::run}

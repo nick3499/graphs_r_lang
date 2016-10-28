@@ -5,7 +5,7 @@ library(rjson)
 library(blsAPI)
 
 response <- blsAPI('CIU1010000000000A')
-json <-fromJSON(response)
+json <- fromJSON(response)
 df <- data.frame(
   year=character(),
   period=character(), 
@@ -22,7 +22,6 @@ print(df)
 ```
 
 ```r
-Start -> Thu Oct 27 18:26:47 2016 
    year period  periodName value
 1  2015    Q04 4th Quarter   2.0
 2  2015    Q03 3rd Quarter   2.0

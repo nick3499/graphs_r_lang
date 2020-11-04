@@ -30,3 +30,5 @@ plot(X, Y, pch = 16)
 plot(X, Y, type = "o", col = "red", xlab = "X", ylab = "Y") 
 title(main = "Upward Trend", font.main = 2, col.main = "blue")
 ```
+
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R6R72LISM)
